@@ -31,6 +31,10 @@ section nav a:hover {
     cursor: pointer;
 }
 
+section #result {
+    float: right;
+}
+
 section #playground {
     border-radius: 15px;
     padding: 15px;

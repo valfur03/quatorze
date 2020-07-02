@@ -4,6 +4,7 @@
         <a>Recommencer</a>  
     </nav>
     
+    <p id="result"></p>
     <div id="playground">
         <div *ngFor="let card of card_slots; index as i">
             <div *ngIf="card.length != 0" id="card" (click)="selCard(card[0].code, i)">

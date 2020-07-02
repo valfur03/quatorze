@@ -89,8 +89,10 @@ export class GameComponent implements OnInit {
           this.first_card = { "code": "0", "value": 0, "index": 0 };
           this.sec_card = { "code": "0", "value": 0, "index": 0 };
 
-          if (this.checkLose()) {
-            alert("Vous avez perdu non?");
+          if (this.checkLose() && this.pairs < 52) {
+            document.getElementById("result").innerHTML = "Vous avez perdu non?";
+          } else if (this.checkLose() && this.pairs == 52) {
+            document.getElementById("result").innerHTML = "Vous avez gagné!";
           }
         }
       }
@@ -115,7 +117,7 @@ export class GameComponent implements OnInit {
       if(card.length > 0) {
         for (var i = key + 1; i < 12; i++) {
           if (this.card_slots[i].length > 0) {
-            console.log(this.codes[card[0].code[0]] + " + " + this.codes[this.card_slots[i][0].code[0]] + " = " + (parseInt(this.codes[card[0].code[0]]) + parseInt(this.codes[this.card_slots[i][0].code[0]])));
+            //console.log(this.codes[card[0].code[0]] + " + " + this.codes[this.card_slots[i][0].code[0]] + " = " + (parseInt(this.codes[card[0].code[0]]) + parseInt(this.codes[this.card_slots[i][0].code[0]])));
             if ((this.codes[card[0].code[0]] + this.codes[this.card_slots[i][0].code[0]]) == 14) {
               lost = false;
             }
