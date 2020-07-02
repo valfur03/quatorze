@@ -88,6 +88,10 @@ export class GameComponent implements OnInit {
   
           this.first_card = { "code": "0", "value": 0, "index": 0 };
           this.sec_card = { "code": "0", "value": 0, "index": 0 };
+
+          if (this.checkLose()) {
+            alert("Vous avez perdu non?");
+          }
         }
       }
     }
@@ -104,12 +108,31 @@ export class GameComponent implements OnInit {
     }
   }
 
+  checkLose() {
+    var lost = true;
+
+    this.card_slots.forEach((card, key) => {
+      if(card.length > 0) {
+        for (var i = key + 1; i < 12; i++) {
+          if (this.card_slots[i].length > 0) {
+            console.log(this.codes[card[0].code[0]] + " + " + this.codes[this.card_slots[i][0].code[0]] + " = " + (parseInt(this.codes[card[0].code[0]]) + parseInt(this.codes[this.card_slots[i][0].code[0]])));
+            if ((this.codes[card[0].code[0]] + this.codes[this.card_slots[i][0].code[0]]) == 14) {
+              lost = false;
+            }
+          }
+        }
+      }
+    });
+
+    return lost;
+  }
+
   mouseEnter(div, index) {
     if (!this.timeout_id) {
       var card_slots = this.card_slots;
       this.timeout_id = window.setTimeout(function() {
           this.timeout_id = null; // EDIT: added this line
-          document.getElementById(div).setAttribute("src", card_slots[index][1].image);
+          if (document.getElementById(div) && card_slots[index].length > 1) document.getElementById(div).setAttribute("src", card_slots[index][1].image);
       }, 1000);
     }
   }
