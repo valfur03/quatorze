@@ -7,7 +7,7 @@
     <div id="playground">
         <div *ngFor="let card of card_slots; index as i">
             <div *ngIf="card.length != 0" id="card" (click)="selCard(card[0].code, i)">
-                <img [id]="card[0].code" [src]="card[0].image">
+                <img [id]="card[0].code" [src]="card[0].image" (mouseenter)="mouseEnter(card[0].code, i)" (mouseleave)="mouseLeave(card[0].code, i)">
             </div>
             <div *ngIf="card.length == 0" id="card" class="emp"></div>
         </div>

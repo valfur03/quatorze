@@ -35,6 +35,8 @@ export class GameComponent implements OnInit {
   first_card = { "code": "0", "value": 0, "index": 0 };
   sec_card = { "code": "0", "value": 0, "index": 0 };
 
+  timeout_id;
+
   constructor(private card: CardsService) { }
 
   ngOnInit(): void {
@@ -101,6 +103,24 @@ export class GameComponent implements OnInit {
       this.card_slots[index2].shift();
 
       this.pairs++;
+    }
+  }
+
+  mouseEnter(div, index) {
+    if (!this.timeout_id) {
+      var card_slots = this.card_slots;
+      this.timeout_id = window.setTimeout(function() {
+          this.timeout_id = null; // EDIT: added this line
+          document.getElementById(div).setAttribute("src", card_slots[index][1].image);
+      }, 1000);
+    }
+  }
+
+  mouseLeave(div, index) {
+    document.getElementById(div).setAttribute("src", this.card_slots[index][0].image);
+    if (this.timeout_id) {
+        window.clearTimeout(this.timeout_id);
+        this.timeout_id = null;
     }
   }
 
