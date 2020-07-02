@@ -34,6 +34,7 @@ section nav a:hover {
 section #playground {
     border-radius: 15px;
     padding: 15px;
+    width: fit-content;
 
     display: grid;
     grid-gap: 20px;
@@ -44,12 +45,28 @@ section #playground {
 }
 
 section #playground #card {
+    border-radius: 10px;
     height: 100%;
 
     display: block;
 }
 
+section #playground #card.emp {
+    border: dashed;
+}
+
+section #playground #card:hover {
+    box-shadow: 0 0 8px #6E675F;
+    
+    cursor: pointer;
+}
+
 section #playground #card img {
+    border-radius: 6px;
     width: 113px;
     height: 157px; 
+}
+
+section #playground #card img.sel {
+    box-shadow: 0 0 8px #225560;
 }

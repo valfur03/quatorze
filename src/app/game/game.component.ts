@@ -14,10 +14,34 @@ export class GameComponent implements OnInit {
     4, 4, 4, 4
   ];
   card_slots;
+  pairs = 0;
+
+  codes = {
+    "A": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "0": 10,
+    "J": 11,
+    "Q": 12,
+    "K": 13
+  }
+
+  first_card = { "code": "0", "value": 0, "index": 0 };
+  sec_card = { "code": "0", "value": 0, "index": 0 };
 
   constructor(private card: CardsService) { }
 
   ngOnInit(): void {
+    this.initGame();
+  }
+
+  initGame() {
     this.card.shuffle().subscribe(() => {
       this.card.getNewStack().subscribe(data => {
         if (data.success) {
@@ -35,6 +59,49 @@ export class GameComponent implements OnInit {
         }
       });
     });
+  }
+
+  selCard(code: string, index) {
+    // this.codes[code[0]]
+
+    document.getElementById(code).className = "sel";
+
+    if (code != undefined) {
+      if (this.first_card.code == "0") {
+        this.first_card.code = code;
+        this.first_card.value = this.codes[code[0]];
+        this.first_card.index = index;
+      } else {
+        if (this.first_card.code == code) {
+          document.getElementById(code).classList.remove("sel");
+          this.first_card = { "code": "0", "value": 0, "index": 0 };
+        } else {
+          this.sec_card.code = code;
+          this.sec_card.value = this.codes[code[0]];
+          this.sec_card.index = index;
+          var sum = this.first_card.value + this.sec_card.value;
+
+          this.checkCards(sum, this.first_card.index, this.sec_card.index);
+
+          document.getElementById(this.first_card.code).classList.remove("sel");
+          document.getElementById(this.sec_card.code).classList.remove("sel");
+  
+          this.first_card = { "code": "0", "value": 0, "index": 0 };
+          this.sec_card = { "code": "0", "value": 0, "index": 0 };
+        }
+      }
+    }
+  }
+
+  checkCards(sum: number, index1: number, index2: number) {
+    if (sum != 14) {
+      alert("La somme des deux cartes doit faire 14!");
+    } else {
+      this.card_slots[index1].shift();
+      this.card_slots[index2].shift();
+
+      this.pairs++;
+    }
   }
 
 }

@@ -5,10 +5,11 @@
     </nav>
     
     <div id="playground">
-        <div *ngFor="let card of card_slots">
-            <div id="card">
-                <img [src]="card[0].image">
+        <div *ngFor="let card of card_slots; index as i">
+            <div *ngIf="card.length != 0" id="card" (click)="selCard(card[0].code, i)">
+                <img [id]="card[0].code" [src]="card[0].image">
             </div>
+            <div *ngIf="card.length == 0" id="card" class="emp"></div>
         </div>
     </div>
 </section>
