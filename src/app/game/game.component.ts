@@ -56,8 +56,6 @@ export class GameComponent implements OnInit {
               this.card_slots[key].push(cards.shift());
             }
           });
-
-          console.log(this.card_slots);
         }
       });
     });
