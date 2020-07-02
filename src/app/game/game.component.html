@@ -6,7 +6,9 @@
     
     <div id="playground">
         <div *ngFor="let card of card_slots">
-            <span class="nsel">{{ card[0] }}</span>
+            <div id="card">
+                <img [src]="card[0].image">
+            </div>
         </div>
     </div>
 </section>
