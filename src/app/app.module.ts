@@ -5,17 +5,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { GameSummaryComponent } from './game-summary/game-summary.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    GameSummaryComponent
+    GameSummaryComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: "", component: GameSummaryComponent }
+      { path: "", component: GameSummaryComponent },
+      { path: "game", component: GameComponent }
     ])
     //AppRoutingModule
   ],
