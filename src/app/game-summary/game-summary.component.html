@@ -4,7 +4,7 @@
         <p>Le but du jeu est de sortir toutes les cartes du tableau.</p>
         <p>Pour sortir des cartes, il faut faire des paires dont la somme est égale à 14.</p>
         <p>Les cartes ont la valeur suivante:</p>
-        <ul>
+        <ul id="cards_value">
             <li>As = 1</li>
             <li>Valet = 11</li>
             <li>Dame = 12</li>
@@ -17,5 +17,9 @@
         <h2>Jouer au jeu</h2>
         <a id="start-game" title="Lancer une partie" [routerLink]="['/game']">Jouer</a>
         <h3>Crédits :</h3>
+        <ul id="credits">
+            <li>L'API pour les cartes <a href="https://deckofcardsapi.com/" target="_blank">deckofcardsapi.com</a></li>
+            <li>Le <a href="https://github.com/valfur03/quatorze" target="_blank">repo Github</a> du projet</li>
+        </ul>
     </article>
 </section>

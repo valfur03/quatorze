@@ -30,8 +30,11 @@ section article p {
 section article ul {
     margin-bottom: 10px;
 
-    font-size: 20px;
     list-style-position: inside;
+}
+
+section article #cards_value {
+    font-size: 20px;
 }
 
 section article #start-game {
@@ -56,4 +59,12 @@ section article #start-game {
 
 section article #start-game:hover {
     background-color: #E0A929;
+}
+
+section article h3 {
+    margin-bottom: 10px;
+}
+
+section article #credits {
+    font-size: 15px;
 }
