@@ -44,6 +44,11 @@ export class GameComponent implements OnInit {
   }
 
   initGame() {
+    this.pairs = 0;
+    this.first_card = { "code": "0", "value": 0, "index": 0 };
+    this.sec_card = { "code": "0", "value": 0, "index": 0 };
+    document.getElementById("result").innerHTML = "";
+
     this.card.shuffle().subscribe(() => {
       this.card.getNewStack().subscribe(data => {
         if (data.success) {
@@ -89,9 +94,9 @@ export class GameComponent implements OnInit {
           this.first_card = { "code": "0", "value": 0, "index": 0 };
           this.sec_card = { "code": "0", "value": 0, "index": 0 };
 
-          if (this.checkLose() && this.pairs < 52) {
+          if (this.checkLose() && this.pairs < 26) {
             document.getElementById("result").innerHTML = "Vous avez perdu non?";
-          } else if (this.checkLose() && this.pairs == 52) {
+          } else if (this.checkLose() && this.pairs == 26) {
             document.getElementById("result").innerHTML = "Vous avez gagné!";
           }
         }
