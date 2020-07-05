@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="rulesTitle" datatype="html">
+        <source>Règles du jeu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title for the game&apos;s rules</note>
+        <note priority="1" from="meaning">Rules Title</note>
+      </trans-unit>
+      <trans-unit id="goal" datatype="html">
+        <source>Le but du jeu est de sortir toutes les cartes du tableau.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">The game&apos;s goal</note>
+        <note priority="1" from="meaning">Goal</note>
+      </trans-unit>
+      <trans-unit id="h2play" datatype="html">
+        <source>Pour sortir des cartes, il faut faire des paires dont la somme est égale à 14.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Explain the player how to play the game</note>
+        <note priority="1" from="meaning">How to play</note>
+      </trans-unit>
+      <trans-unit id="valuesList" datatype="html">
+        <source>Les cartes ont la valeur suivante:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Title of the cards&apos; value list</note>
+        <note priority="1" from="meaning">Cards&apos; value</note>
+      </trans-unit>
+      <trans-unit id="aceVal" datatype="html">
+        <source>As = 1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Value of the ace</note>
+        <note priority="1" from="meaning">Ace&apos;s value</note>
+      </trans-unit>
+      <trans-unit id="jackVal" datatype="html">
+        <source>Valet = 11</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Value of the jack</note>
+        <note priority="1" from="meaning">Jack&apos;s value</note>
+      </trans-unit>
+      <trans-unit id="queenVal" datatype="html">
+        <source>Dame = 12</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Value of the queen</note>
+        <note priority="1" from="meaning">Queen&apos;s value</note>
+      </trans-unit>
+      <trans-unit id="kingVal" datatype="html">
+        <source>Roi = 13</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Value of the king</note>
+        <note priority="1" from="meaning">King&apos;s value</note>
+      </trans-unit>
+      <trans-unit id="othersVal" datatype="html">
+        <source>Les autres valent leur valeur indiquées (le 3 vaut 3, ...).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Value of the other cards</note>
+        <note priority="1" from="meaning">Others&apos; value</note>
+      </trans-unit>
+      <trans-unit id="playTitle" datatype="html">
+        <source>Jouer au jeu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">The play title</note>
+        <note priority="1" from="meaning">Play</note>
+      </trans-unit>
+      <trans-unit id="startGame" datatype="html">
+        <source>Jouer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">The button to start the game</note>
+        <note priority="1" from="meaning">Start game</note>
+      </trans-unit>
+      <trans-unit id="startGameTitle" datatype="html">
+        <source>Lancer une partie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">The title of the button to start the game</note>
+        <note priority="1" from="meaning">Start game title</note>
+      </trans-unit>
+      <trans-unit id="gameCredits" datatype="html">
+        <source>Crédits :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">The credits of the game</note>
+        <note priority="1" from="meaning">Credits</note>
+      </trans-unit>
+      <trans-unit id="APICredits" datatype="html">
+        <source>L&apos;API pour les cartes <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>deckofcardsapi.com<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">The credits for the API</note>
+        <note priority="1" from="meaning">API credits</note>
+      </trans-unit>
+      <trans-unit id="repoCredits" datatype="html">
+        <source>Le <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>repo Github<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> du projet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game-summary/game-summary.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">The credits for the Github repo</note>
+        <note priority="1" from="meaning">Credits</note>
+      </trans-unit>
+      <trans-unit id="newGame" datatype="html">
+        <source>Nouvelle partie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/game.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">The button to start a new game</note>
+        <note priority="1" from="meaning">New game</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

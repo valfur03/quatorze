@@ -1,25 +1,25 @@
 <section>
     <article id="game-rules">
-        <h2>Règles du jeu</h2>
-        <p>Le but du jeu est de sortir toutes les cartes du tableau.</p>
-        <p>Pour sortir des cartes, il faut faire des paires dont la somme est égale à 14.</p>
-        <p>Les cartes ont la valeur suivante:</p>
+        <h2 i18n="Rules Title|Title for the game's rules@@rulesTitle">Règles du jeu</h2>
+        <p i18n="Goal|The game's goal@@goal">Le but du jeu est de sortir toutes les cartes du tableau.</p>
+        <p i18n="How to play|Explain the player how to play the game@@h2play">Pour sortir des cartes, il faut faire des paires dont la somme est égale à 14.</p>
+        <p i18n="Cards' value|Title of the cards' value list@@valuesList">Les cartes ont la valeur suivante:</p>
         <ul id="cards_value">
-            <li>As = 1</li>
-            <li>Valet = 11</li>
-            <li>Dame = 12</li>
-            <li>Roi = 13</li>
+            <li i18n="Ace's value|Value of the ace@@aceVal">As = 1</li>
+            <li i18n="Jack's value|Value of the jack@@jackVal">Valet = 11</li>
+            <li i18n="Queen's value|Value of the queen@@queenVal">Dame = 12</li>
+            <li i18n="King's value|Value of the king@@kingVal">Roi = 13</li>
         </ul>
-        <p>Les autres valent leur valeur indiquées (le 3 vaut 3, ...).</p>
+        <p i18n="Others' value|Value of the other cards@@othersVal">Les autres valent leur valeur indiquées (le 3 vaut 3, ...).</p>
     </article>
     
     <article id="start-game">
-        <h2>Jouer au jeu</h2>
-        <a id="start-game" title="Lancer une partie" [routerLink]="['/game']">Jouer</a>
-        <h3>Crédits :</h3>
+        <h2 i18n="Play|The play title@@playTitle">Jouer au jeu</h2>
+        <a id="start-game" i18n-title="Start game title|The title of the button to start the game@@startGameTitle" title="Lancer une partie" [routerLink]="['/game']" i18n="Start game|The button to start the game@@startGame">Jouer</a>
+        <h3 i18n="Credits|The credits of the game@@gameCredits">Crédits :</h3>
         <ul id="credits">
-            <li>L'API pour les cartes <a href="https://deckofcardsapi.com/" target="_blank">deckofcardsapi.com</a></li>
-            <li>Le <a href="https://github.com/valfur03/quatorze" target="_blank">repo Github</a> du projet</li>
+            <li i18n="API credits|The credits for the API@@APICredits">L'API pour les cartes <a href="https://deckofcardsapi.com/" target="_blank">deckofcardsapi.com</a></li>
+            <li i18n="Credits|The credits for the Github repo@@repoCredits">Le <a href="https://github.com/valfur03/quatorze" target="_blank">repo Github</a> du projet</li>
         </ul>
     </article>
 </section>
