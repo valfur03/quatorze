@@ -4,6 +4,7 @@ header {
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 
     background-color: #E3B23C;
@@ -15,4 +16,15 @@ header h1 a {
     color: white;
     font-size: 50px;
     text-decoration: none;
+}
+
+header #language a {
+    margin-right: 15px;
+
+    color: white;
+    text-decoration: none;
+}
+
+header #language a:hover {
+    text-decoration: underline white;
 }
